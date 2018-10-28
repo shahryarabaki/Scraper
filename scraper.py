@@ -77,7 +77,7 @@ if __name__ == '__main__':
             'Keep-Alive': '300',
             'Pragma': 'no-cache',
             'Cache-Control': 'no-cache',
-            'Accept-Language': '*'
+            'Accept-Language': '*',
             'Accept-Encoding': 'gzip, deflate'
         }
         print "creating pool"
