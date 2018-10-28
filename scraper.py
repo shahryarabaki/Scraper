@@ -58,6 +58,10 @@ def getHTML(link,url_list, dupcheck_crawl, dupcheck_logins, request_header, q, o
         pass
 
 if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        print "Insufficient number of inputs"
+        print "Usage: python scraper.py seed_file output_file"
+        exit()
     try:
         print "Program started"
         total_urls = 0
@@ -83,7 +87,7 @@ if __name__ == '__main__':
         print "creating pool"
         # start 4 worker processes
         pool = Pool(processes=100)
-                print "Reading seed"
+        print "Reading seed"
         with open(sys.argv[1], "r") as seed_file:
             for line in seed_file:
                 url = line.strip().rstrip('\n')
